@@ -4,8 +4,8 @@ This is a touch screen interactive mirror with a screen size of 8 inches
 Interactive features :
 This interactive design has some useful information like
 
--- Phone
--- Social media - Facebook, Whatsapp, Instagram
+-- Phone.
+-- Social media - Facebook, Whatsapp, Instagram.
 -- Media applications - Music, Youtube
 -- Calendar data that helps to access and display daily events
 -- Current time and weather information
