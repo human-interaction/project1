@@ -8,4 +8,4 @@ Future implementation,
 Making phone calls
 Including camera
  
-![image](https://user-images.githubusercontent.com/56712822/67138552-c4641980-f20a-11e9-8499-ebf143d48185.png width="200" height="400")
+![image](https://user-images.githubusercontent.com/56712822/67138552-c4641980-f20a-11e9-8499-ebf143d48185.png,width="200" height="400")
