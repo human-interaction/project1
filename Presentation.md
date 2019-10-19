@@ -5,6 +5,7 @@ Interactive features :
 This interactive design has some useful information like
 
 Phone
+
 Social media - Facebook, Whatsapp, Instagram
 Media applications - Music, Youtube
 Calendar data that helps to access and display daily events
