@@ -83,6 +83,7 @@
                   //  t.user.profile_image =loadImage(t.user.profile_image_url);
                     document.getElementById('text').innerText=tweets.data[count].text;
                 document.getElementById('button').setAttribute('style','display:block');
+                document.getElementById('ldtweet').setAttribute('style','display:none');
               count++;
 
             }
@@ -97,7 +98,7 @@
 
 </head>
 <body>
-<button onclick="loadTweets()">Load Tweets</button>
+<button onclick="loadTweets()" id="ldtweet">Load Tweets</button>
 <p id="tweets"></p>
 <img src="" id="prof">
 <p id="text"></p>
