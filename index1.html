@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HCI demo</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/4.2.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.2.0/firebaseui.css" />
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
+    <script src="node_modules/globalvars.js"></script>
+
+    <script src="lib/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="lib/p5.sound.min.js"></script>
+
+
+
+    <script src="node_modules/draggable.js"></script>
+
+    <script>
+      //  import "firebase/auth";
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB7zS-uMmwdLVWvTTYIQrAkAo3zGLUv8FQ",
+            authDomain: "health-5c36c.firebaseapp.com",
+            databaseURL: "https://health-5c36c.firebaseio.com",
+            projectId: "health-5c36c",
+            storageBucket: "health-5c36c.appspot.com",
+            messagingSenderId: "582943497880",
+            appId: "1:582943497880:web:1ab4c326e5d5662e40faed",
+            measurementId: "G-GL6VETNE2G"
+        };
+        // Initialize Firebase
+
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        let baseUrl = 'http://localhost:3000/api/';
+       // console.log("here above provider");
+        let provider = new firebase.auth.TwitterAuthProvider();
+        firebase.auth().signInWithPopup(provider).then(function(result) {
+            accessToken= result.credential.accessToken;
+            secret = result.credential.secret;
+            var user = result.user;
+           // console.log("here above auth");
+            alert("Authenticated with twitter" + user.displayName);
+            authenticate();
+        }).catch(function(error) {
+            console.log(error);
+        });
+        function httpGet(url){
+            let xmlHttp = new XMLHttpRequest();
+
+            xmlHttp.open("GET",url,false);
+            xmlHttp.send(null);
+            return xmlHttp.responseText;
+        }
+
+        function authenticate() {
+
+            let url =baseUrl +'authenticate?access_token='+accessToken+'&access_token_secret='+secret;
+            let authret = httpGet(url);
+            if (authret === "ok"){
+
+                alert("Logged into node.js sucessfully");
+            }
+            else {
+                alert("could not login");
+            }
+
+        }
+        let count=0
+        function loadTweets() {
+            let url = baseUrl+'home';
+           // document.getElementById("tweets").innerText=httpGet(url)
+            tweets=httpGet(url);
+            tweets=JSON.parse(tweets);
+            if(tweets && tweets.data && tweets.data.length>0){
+
+                   // console.log(t);
+                  //  t.user.profile_image =loadImage(t.user.profile_image_url);
+                    document.getElementById('text').innerText=tweets.data[count].text;
+                document.getElementById('button').setAttribute('style','display:block');
+              count++;
+
+            }
+
+        }
+        function nextTweets(){
+            //document.getElementById('prof').setAttribute('src',t.user.profile_image);
+            document.getElementById('text').innerText=tweets.data[count].text;
+             count++;
+        }
+    </script>
+
+</head>
+<body>
+<button onclick="loadTweets()">Load Tweets</button>
+<p id="tweets"></p>
+<img src="" id="prof">
+<p id="text"></p>
+<button onclick="nextTweets()" style="display: none;" id="button">next tweet</button>
+</body>
+</html>
+
