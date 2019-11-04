@@ -10,4 +10,4 @@ We have Media related information like Spotify and Youtube.
 
 The interface looks like this
 
-<img src="https://user-images.githubusercontent.com/56712822/68156770-092dc700-ff12-11e9-8b65-4a397f37b528.jpg" width:200>
+<img src="https://user-images.githubusercontent.com/56712822/68157167-c3253300-ff12-11e9-928a-52715ec14244.png" width:200>
