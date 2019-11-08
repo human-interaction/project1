@@ -3,8 +3,9 @@
 Design and Screen Size :
 This is a touch screen interactive mirror with a screen size of 8 inches
 
-Interactive features :
-This interactive design has some useful information like
+Sketch :
+
+This interactive design sketch looks like this:
                                            
 1.Social media - Facebook, Whatsapp, Instagram                         
 2.Media applications - Music, Youtube                     
@@ -14,15 +15,14 @@ This interactive design has some useful information like
 
 <img src="https://user-images.githubusercontent.com/56712822/67139010-a7cae000-f210-11e9-9a75-900b8eb602e2.png" width:200>
 
-Design and Screen Size : This is a touch screen interactive mirror with a screen size of 8 inches
+Interface :
 
-Interactive features : This interactive design has some useful information like
+This interactive design has some useful information like
 
-Social Media - Facebook, WhatsApp, Instagram.
-
+Social Media - Facebook, WhatsApp, Instagram, Twitter.
 We also have information showing weather in current location, current date & time, Calendar and Newsfeed.
-
 We have Media related information like Spotify and Youtube.
+It displays current tweets as well.
 
 The interface looks like this
 
