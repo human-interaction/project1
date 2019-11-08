@@ -7,7 +7,7 @@ Sketch :
 
 This interactive design sketch looks like this:
                                            
-1.Social media - Facebook, Whatsapp, Instagram                         
+1.Social media - Facebook, Whatsapp, Instagram                        
 2.Media applications - Music, Youtube                     
 3.Calendar data that helps to access and display daily events                
 4.Current time and weather information                  
