@@ -27,7 +27,7 @@ It displays current tweets as well.
 
 The interface looks like this
 
-<img src="https://user-images.githubusercontent.com/56712822/68157766-f0261580-ff13-11e9-815a-b6b3e192591a.gif" width:200>
+<img src="https://user-images.githubusercontent.com/56712822/68520124-f5a89600-025a-11ea-8d4a-daf781c2972e.gif" width:200>
 
   
 
