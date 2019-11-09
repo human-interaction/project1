@@ -1,6 +1,6 @@
 <img src="https://user-images.githubusercontent.com/56712822/68514067-54154a80-0242-11ea-8eee-d3269e7bfb2d.jpeg" width:200>
 
-Design and Screen Size :
+Design and Screen Size:
 
 This is a touch screen interactive mirror with a screen size of 8 inches
 
